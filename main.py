@@ -9,7 +9,7 @@ nato_dict = {row.letter:row.code for (index, row) in data.iterrows()}
 usr = input("Enter word: ").upper()
 
 try:
-    result = [nato_dict.get(letter) for letter in usr]
+    result = [nato_dict[letter] for letter in usr]
 except KeyError:
     print("Please input a letter.")
 else:
